@@ -1,4 +1,38 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    }
-input[type=button], input[type=submit], input[type=reset]
+.judul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%
+}
+.main-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 40%
+}
+input[type=button], input[type=submit], input[type=reset] {
+    margin-top: 15px;
+    margin-right: 10px;
+}
+form {
+    background-color: aquamarine;
+}
+
+.hasil {
+    text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+    main {
+        flex-direction: column;
+    }
+    .judul {
+        text-align: center;
+    }
+    .hasil {
+        margin-top: 15px;
+    }
+}
