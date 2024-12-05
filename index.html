@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <link rel="stylesheet" type="text/css" href="BMI Calculator-stylesheet_Carmen Claudia.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
 
     <h1 id="judul">Kalkulator BMI</h1>
     <form>
@@ -30,16 +30,12 @@
     <div>
         <input type="button" onclick="kalkulasiBMI()" value="Kalkulasi BMI"></input>
     </div>
+    <div>
+        <input type="reset" value="Reset">
+    </div>
     <div id="output">
     </div>
 </body>
-<script>
-    function kalkulasiBMI() {
-            var berat = document.getElementById("berat").value;
-            var tinggi = document.getElementById("tinggi").value;
-            var BMI = (parseInt(berat) / (parseInt(tinggi))**2) * 10000;
-            var resultDiv = document.getElementById("output"); <!-----wadah mau taru hasil disebut dulu>
-            resultDiv.innerText = BMI.toFixed(2);
-            }
-</script>
+<script src="script.js">
+    </script>
 </html>
