@@ -1,0 +1,45 @@
+<!DOCTYPE html> <!wajib ditulis tipenya>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <style font-family: ""></style>
+</head>
+
+<body>
+    <link rel="stylesheet" type="text/css" href="BMI Calculator-stylesheet_Carmen Claudia.css">
+
+    <h1 id="judul">Kalkulator BMI</h1>
+    <form>
+        <div class="Kelamin">
+            <input type="radio" name="kelamin"> <!lebih bagus nama var all lowercase>
+            <label for=”kelamin”>Pria</label>
+            <input type="radio" name="kelamin">
+            <label for=”kelamin”>Wanita</label> <!name harus sama di radio agar eksklusif hanya satu opsi dapat dipilih>
+        </div>
+        <div class="Berat Tubuh">
+            <pre><label for=”berat”>Berat Tubuh (dalam kilogram)</pre>
+            <input type="number" id="berat" name="berat" min="1"> <!lebih bagus nama var all lowercase>
+        </div>
+        <div class="Tinggi Tubuh">
+            <pre><label for=”tinggi”>Tinggi Tubuh (dalam centimeter)</label></pre>
+            <input type="number" id="tinggi" name="tinggi" min="1">
+        </div>
+    </form>
+    <div>
+        <input type="button" onclick="kalkulasiBMI()" value="Kalkulasi BMI"></input>
+    </div>
+    <div id="output">
+    </div>
+</body>
+<script>
+    function kalkulasiBMI() {
+            var berat = document.getElementById("berat").value;
+            var tinggi = document.getElementById("tinggi").value;
+            var BMI = (parseInt(berat) / (parseInt(tinggi))**2) * 10000;
+            var resultDiv = document.getElementById("output"); <!-----wadah mau taru hasil disebut dulu>
+            resultDiv.innerText = BMI.toFixed(2);
+            }
+</script>
+</html>
