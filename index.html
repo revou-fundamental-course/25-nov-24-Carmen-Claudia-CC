@@ -8,12 +8,12 @@
 </head>
 
 <body>
-    
     <link rel="stylesheet" type="text/css" href="styles.css">
-    <header class="judul"><h1>Kalkulator BMI</h1></header>
-    <main style="display: flex">
+    <div class="headings"></div>
+    <main>
         <!--class itu untuk CSS, id itu untuk JS-->
         <section class="main-section">
+            <header class="judul"><h1>Kalkulator BMI</h1></header>
             <form>
                 <div class="Kelamin">
                     <!--lebih bagus nama var all lowercase, name harus sama di radio agar eksklusif hanya satu opsi dapat dipilih-->
@@ -21,6 +21,10 @@
                     <label for=”kelamin”>Pria</label>
                     <input type="radio" name="kelamin">
                     <label for=”kelamin”>Wanita</label>
+                </div>
+                <div class="Usia">
+                    <pre><label for=”usia”>Usia (dalam tahun)</pre>
+                    <input type="number" id="usia" name="usia" min="1">
                 </div>
                 <div class="Berat Tubuh">
                     <pre><label for=”berat”>Berat Tubuh (dalam kilogram)</pre>
@@ -30,7 +34,7 @@
                     <pre><label for=”tinggi”>Tinggi Tubuh (dalam centimeter)</label></pre>
                     <input type="number" id="tinggi" name="tinggi" min="1">
                 </div>
-                <div>
+                <div style="margin-top: 15px;">
                     <!--Tombol Kalkulasi-->
                     <input type="button" onclick="kalkulasiBMI()" value="Kalkulasi BMI"></input>
                     <!--Tombol Reset-->
@@ -38,12 +42,13 @@
                 </div>
             </form>
         </section>
-        <section class="main-section">
-            <article>
+        <section id="section2" class="main-section">
+            <header class="hasilBMI"><h1>BMI Anda...</h1></header>
+
                 <form class="hasil">
                 <div id="output">
                 </div>
-            </article>
+
         </section>
     </main>
 </body>

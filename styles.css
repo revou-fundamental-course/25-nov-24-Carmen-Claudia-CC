@@ -1,38 +1,57 @@
 * {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
    }
-.judul {
+
+body {
+    background-image: linear-gradient(rgb(8, 16, 13), rgb(37, 75, 62));
+}
+
+.column {
     display: flex;
     flex-direction: row;
+    flex: 100%;
     justify-content: space-around;
-    width: 40%
+    width: 100%;
 }
+
 .main-section {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 40%
+    flex-direction:column;
+    width: 340px;
+    align-items: center;
 }
+
 input[type=button], input[type=submit], input[type=reset] {
     margin-top: 15px;
     margin-right: 10px;
 }
 form {
-    background-color: aquamarine;
-}
-
-.hasil {
+    background-image: linear-gradient(rgba(127, 255, 212, 0.765),rgb(196, 254, 234));
+    box-shadow: 0 0 5px darkslategrey;
+    border-radius: 10px;
+    padding: 40px 15px;
+    margin: 10px;
     text-align: center;
+    width:100%;
+    flex-grow:1;
+}
+main {
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction:row;
+}
+H1 {
+    white-space:nowrap;
+    font-weight: bold;
+    color: rgb(212, 238, 229);
 }
 
-@media only screen and (max-width: 480px) {
-    main {
-        flex-direction: column;
-    }
-    .judul {
-        text-align: center;
-    }
-    .hasil {
-        margin-top: 15px;
-    }
+.button {
+    background-color: white;
+    margin-top: 25px;
+}
+
+@media only screen and (max-width: 710px) {
+    main { flex-direction:column; align-items: center; }
 }
